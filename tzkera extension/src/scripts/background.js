@@ -80,40 +80,36 @@ function getDueTime(prayers) {
       nextPrayer = prayer;
     }
   }
-  return [nextPrayer, Math.floor(minTime/60), minTime%60];
+  return [nextPrayer, Math.floor(minTime / 60), minTime % 60];
 }
 
 function sendNotification(title, message) {
-      chrome.notifications.create({
-        type: "basic",
-        iconUrl: "../../public/mosque.png",
-        title: title,
-        message: message,
-      });
+  chrome.notifications.create({
+    type: "basic",
+    iconUrl: "../../public/mosque.png",
+    title: title,
+    message: message,
+  });
 }
 
 chrome.alarms.create("checkPrayerTime", {
-  periodInMinutes: 0.5,
+  periodInMinutes: 0.8,
 });
-
 
 chrome.alarms.create("updatePrayerTimes", {
   when: new Date().setHours(0, 0, 1, 0),
   periodInMinutes: 1440,
 });
 
-
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "checkPrayerTime") {
     let dueTime = getDueTime(prayers);
-    if (dueTime[2] <= 1) {
+    if (dueTime[1] === 0 && dueTime[2] >= 1) {
       sendNotification("Prayer Time", `It's time for ${dueTime[0]}`);
     }
   } else if (alarm.name === "updatePrayerTimes") {
-    getPrayerTime(); 
+    getPrayerTime();
   }
 });
-
-
 
 getPrayerTime();
