@@ -54,11 +54,24 @@ html{
   position: absolute;
   z-index: 1;
   color: white;
+  width: 100%;
+  
 }
 .header .container{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  min-height: 70px;
+}
+.header .container::before{
+  content: "";
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 1px;
+  background-color: var(--alt-main-color);
+  bottom: 0px;
+  left: 15px;
 }
 .header #nav2{
   display: flex;
@@ -71,16 +84,71 @@ html{
   font-size: 16px;
   list-style: none;
   display: flex;
+  gap: 10px;
 }
 .header ul li{
-  padding: 15px;
+  padding: 10px;
   cursor: pointer;
+}
+.header ul a::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--alt-main-color);
+  bottom: 0px;
+  transition: 0.3s;
+}
+#nav1 a:hover{
+  font-weight: bold;
 }
 .header a:hover{
   color: var(--alt-main-color);
 }
+#a1:hover::before{
+  width: 8%;
+}
+#a2:hover::before{
+  width: 5%;
+}
+#a3:hover::before{
+  width: 3%;
+}
+#a4:hover::before{
+  width: 6%;
+}
+.header i{
+  display: none;
+}
+@media (max-width: 770px) {
+  .header img{
+    display: none;
+  }
+  .header i{
+    display: block;
+  }
+  .header ul{
+    display: none;
+  }
+  #nav2 i:hover + ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 50%;
+    background-color: rgb(64 47 11 / 50%);
+  }
+  .header ul a::before{
+    display: none;
+  }
+}
 .header #log-in, #register{
-  padding: 15px;
+  padding: 5px 15px;
+  border: 1px solid transparent;
+  box-shadow: 5px 5px 15px var(--alt-main-color);
+  margin-left: 15px;
+  
 }
 /* End Header */
 /* Start Landing */
