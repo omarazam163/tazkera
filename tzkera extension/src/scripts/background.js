@@ -1,4 +1,4 @@
-const apiKey = "fdcd50df-6653-49e6-87cb-ee2660e7c95c";
+const apiKey = "0ae8f6f8-c713-4802-a4d6-8b8dbb75ba11";
 let prayers = {};
 async function getIpAdress() {
   let ip = await fetch("https://api.ipify.org?format=json");
@@ -18,7 +18,7 @@ async function getLocationFromIp() {
 async function GetTimings() {
   let location = await getLocationFromIp();
   let timings = await fetch(
-    `https://api.aladhan.com/v1/timings/01-01-2025?latitude=${location.latitude}&longitude=${location.longitude}`
+    `https://api.aladhan.com/v1/timings?latitude=${location.latitude}&longitude=${location.longitude}`
   );
   timings = await timings.json();
   return [location, timings];
@@ -29,6 +29,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     GetTimings()
       .then((result) => {
         const [location, timings] = result;
+        console.log(timings);
         const displayedData = {
           city: location.city,
           country: location.countryName,
@@ -51,18 +52,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 });
 
-async function getPrayerTime() {
-  let data = await GetTimings();
-  let timings = data[1];
-  prayers = {
-    Fajr: timings.data.timings.Fajr,
-    Dhuhr: timings.data.timings.Dhuhr,
-    Asr: timings.data.timings.Asr,
-    Maghrib: timings.data.timings.Maghrib,
-    Isha: timings.data.timings.Isha,
-  };
-}
-
 function getDueTime(prayers) {
   let now = new Date();
   let currentMinutes = now.getHours() * 60 + now.getMinutes();
@@ -83,6 +72,19 @@ function getDueTime(prayers) {
   return [nextPrayer, Math.floor(minTime / 60), minTime % 60];
 }
 
+async function getPrayerTime() {
+  let data = await GetTimings();
+  let timings = data[1];
+  prayers = {
+    Fajr: timings.data.timings.Fajr,
+    Dhuhr: timings.data.timings.Dhuhr,
+    Asr: timings.data.timings.Asr,
+    Maghrib: timings.data.timings.Maghrib,
+    Isha: timings.data.timings.Isha,
+  };
+  AddAlarms();
+}
+
 function sendNotification(title, message) {
   chrome.notifications.create({
     type: "basic",
@@ -92,24 +94,39 @@ function sendNotification(title, message) {
   });
 }
 
-chrome.alarms.create("checkPrayerTime", {
-  periodInMinutes: 0.8,
-});
+function AddAlarms() {
+  chrome.alarms.clearAll(() => {
+    console.log("All previous alarms cleared.");
+    for (const prayer in prayers) {
+      let [hours, minutes] = prayers[prayer].split(":").map(Number);
+      let alarmTime = new Date();
+      alarmTime.setHours(hours, minutes, 0, 0);
 
-chrome.alarms.create("updatePrayerTimes", {
-  when: new Date().setHours(0, 0, 1, 0),
-  periodInMinutes: 1440,
-});
+      // If the time has already passed today, schedule it for the next day
+      if (alarmTime.getTime() <= Date.now()) {
+        alarmTime.setDate(alarmTime.getDate() + 1);
+      }
+
+      chrome.alarms.create(prayer, { when: alarmTime.getTime() });
+      console.log(`Alarm set for ${prayer} at`, alarmTime.toLocaleString());
+    }
+  });
+}
 
 chrome.alarms.onAlarm.addListener((alarm) => {
-  if (alarm.name === "checkPrayerTime") {
-    let dueTime = getDueTime(prayers);
-    if (dueTime[1] === 0 && dueTime[2] >= 1) {
-      sendNotification("Prayer Time", `It's time for ${dueTime[0]}`);
-    }
-  } else if (alarm.name === "updatePrayerTimes") {
+  if (["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"].includes(alarm.name)) {
+    sendNotification("Prayer Time", `It's time for ${alarm.name}`);
+    getPrayerTime();
+  }
+  if (alarm.name === "updatePrayerTimes") {
     getPrayerTime();
   }
 });
 
-getPrayerTime();
+
+
+chrome.alarms.create("updatePrayerTimes", {
+      when: new Date().getTime(),
+      periodInMinutes: 1440,
+});
+
