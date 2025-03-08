@@ -106,16 +106,16 @@ html{
   color: var(--alt-main-color);
 }
 #a1:hover::before{
-  width: 8%;
+  width: 100px;
 }
 #a2:hover::before{
-  width: 5%;
+  width: 65px;
 }
 #a3:hover::before{
-  width: 3%;
+  width: 35px;
 }
 #a4:hover::before{
-  width: 6%;
+  width: 65px;
 }
 .header i{
   display: none;
