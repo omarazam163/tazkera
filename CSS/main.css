@@ -18,6 +18,9 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+html{
+  scroll-behavior: smooth;
+}
 /* small */
 @media (min-width: 768px) {
   .container {
@@ -42,9 +45,44 @@ a {
   --main-color: #d1b260;
   --alt-main-color: #d5b44d85;
   --background-color: #010103;
+  --background-color2:#402F0B;
   --section-padding: 100px;
 }
 /* End Variables */
+/* start Header */
+.header{
+  position: absolute;
+  z-index: 1;
+  color: white;
+}
+.header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header #nav2{
+  display: flex;
+  align-items: center;
+}
+.header img{
+  height: 70px;
+}
+.header ul{
+  font-size: 16px;
+  list-style: none;
+  display: flex;
+}
+.header ul li{
+  padding: 15px;
+  cursor: pointer;
+}
+.header a:hover{
+  color: var(--alt-main-color);
+}
+.header #log-in, #register{
+  padding: 15px;
+}
+/* End Header */
 /* Start Landing */
 .landing {
   position: relative;
@@ -79,7 +117,7 @@ body {
 /* Start Podcast */
 .podcast {
   position: relative;
-  background-color: var(--background-color);
+  background-image: linear-gradient(var(--background-color2),var(--background-color));
   color: white;
 }
 @media (max-width: 1200px) {
@@ -95,7 +133,7 @@ body {
 .podcast .boxes-holder {
   width: 100%;
   padding: 25px;
-  background-color: var(--alt-main-color);
+  background-color: var(--background-color2);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 40px;
@@ -150,18 +188,20 @@ body {
 .podcast .box .text {
   text-align: center;
   line-height: 1.6;
+  transition: 0.3s;
+  transition-delay: 0.3s;
 }
 .podcast .box .text p {
   font-size: 14px;
 }
 @media (min-width: 1200px) {
   .podcast .box .text {
-    display: none;
+    opacity: 0;
     position: absolute;
     top: 10px;
   }
   .podcast .box:hover .text {
-    display: block;
+    opacity: 1;
   }
 }
 .podcast .footer {
