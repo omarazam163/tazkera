@@ -182,6 +182,89 @@ body {
   -o-transform: translate(-50%, -50%);
 }
 /* End Landing */
+/* Start Salah */
+.salah{
+  position: relative;
+  background-image: linear-gradient(var(--background-color2),var(--background-color));
+  padding: 100px 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.salah .layer{
+  display: flex;
+  align-items: center;
+  background-color: rgb(1 1 3 / 40%);
+  font-family: "Reem Kufi", sans-serif;
+  width: calc((100% - 150px) / 2);
+  margin-right: 150px;
+  height: 300px;
+  justify-content: center;
+
+}
+.layer h3{
+  color: whitesmoke;
+  font-size: 45px;
+}
+.layer #h3-2{
+  margin-top: 45px;
+}
+.layer h4{
+  color: whitesmoke;
+  font-size: 25px;
+  margin-top: 130px;
+  margin-right: -160px;
+}
+.salah .image{
+  width: calc((100% - 150px) / 2);
+}
+.salah .container{
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(6 , 100px);
+}
+.image .box img{
+  height: 160px;
+  position: relative;
+}
+.image .box h5{
+  color: whitesmoke;
+  font-size: 35px;
+  position: absolute;
+  font-family: "Reem Kufi", sans-serif;
+}
+.image .container .box:first-child h5{
+  transform: translate(-190%, -130%);
+}
+.image .container .box:nth-child(2) h5{
+  transform: translate(-140%, -130%);
+}
+.image .container .box:nth-child(3) h5{
+  transform: translate(-150%, -130%);
+}
+.image .container .box:nth-child(4) h5{
+  transform: translate(-130%, -130%);
+}
+.image .container .box:nth-child(5) h5{
+  transform: translate(-140%, -130%);
+}
+.image .container .box:first-child{
+  grid-column: 1 / span 2;
+}
+.image .container .box:nth-child(2){
+  grid-column: 3 / span 2;
+}
+.image .container .box:nth-child(3){
+  grid-column: 5 / span 2;
+}
+.image .container .box:nth-child(4){
+  grid-column: 2 / span 2;
+}
+.image .container .box:nth-child(5){
+  grid-column: 4 / span 3;
+}
+/* End Salah */
 /* Start Podcast */
 .podcast {
   position: relative;
