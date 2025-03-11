@@ -249,6 +249,15 @@ body {
   left: 50%;
   transform: translate(-140%, 75%);
 }
+.box .timing
+{
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(15%, 30%);
+}
 .image .container .box:first-child{
   grid-column: 1 / span 2;
 }
@@ -303,9 +312,6 @@ body {
   .image .box h5{
     transform: translate(-150%, 100%);
   }
-  .salah {
-    gap: 0px;
-  }
 }
 @media (max-width:973px){
   .salah .container{
@@ -326,7 +332,6 @@ body {
   .image .container .box:nth-child(5){
     grid-column: 2 / span 1;
   }
-
 }
 @media(max-width:750px){
   .salah .container{
@@ -346,9 +351,6 @@ body {
   }
   .image .container .box:nth-child(5){
     grid-column: 1 / span 1;
-  }
-  .salah {
-    gap: 25px;
   }
 }
 /* End Salah */
@@ -464,4 +466,5 @@ body {
     padding: 0;
   }
 }
+
 /* End Podcast */
