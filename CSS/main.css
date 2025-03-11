@@ -484,4 +484,10 @@ body {
   }
 }
 
+#logged_in_nav
+{
+  display: flex;
+  gap:30px;
+}
+
 /* End Podcast */
