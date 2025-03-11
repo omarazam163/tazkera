@@ -36,8 +36,7 @@ async function displayTimings() {
     Maghrib: timings.data.timings.Maghrib,
     Isha: timings.data.timings.Isha,
   };
-  counter = 0;
-  console.log(prayers);
+  let counter = 0;
   for(const prayer in prayers)
   {
     timingsDivs[counter].innerHTML= prayers[prayer]

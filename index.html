@@ -21,16 +21,21 @@
     rel="stylesheet" />
   <!-- Main CSS File -->
   <link rel="stylesheet" href="./CSS/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
 </head>
 
 <body>
   <!-- start Header -->
   <div class="header">
     <div class="container">
-      <nav id="nav1">
-        <a href="" id="log-in">Log in</a>
-        <a href="/sign-page/index.html" id="register" target="_blank">Register</a>
-      </nav>
+      <div id="logged_out_nav">
+        <a id="log-in" href="./auth/login.html">Log in</a>
+        <a href="./auth/register.html" id="register" target="_self">Register</a>
+      </div>
+      <div id="logged_in_nav" style="display: none;">
+        <span id="user">here</span>
+        <a id="log-out" href="#">log out</a>
+      </div>
       <nav id="nav2">
         <ul>
           <li><a href="#salah">مواقيت الصلاة</a></li>
@@ -62,27 +67,27 @@
         <div class="box">
           <img src="./images/b492e155-2c36-43e0-bda7-07b029d1afe0.png" alt="">
           <h5>الفجر</h5>
-          <span class="timing">5:00</span>
+          <span class="timing"></span>
         </div>
         <div class="box">
           <img src="./images/b492e155-2c36-43e0-bda7-07b029d1afe0.png" alt="">
           <h5>الظهر</h5>
-          <span class="timing">5:00</span>
+          <span class="timing"></span>
         </div>
         <div class="box">
           <img src="./images/b492e155-2c36-43e0-bda7-07b029d1afe0.png" alt="">
           <h5>العصر</h5>
-          <span class="timing">5:00</span>
+          <span class="timing"></span>
         </div>
         <div class="box">
           <img src="./images/b492e155-2c36-43e0-bda7-07b029d1afe0.png" alt="">
           <h5>المغرب</h5>
-          <span class="timing">5:00</span>
+          <span class="timing"></span>
         </div>
         <div class="box">
           <img src="./images/b492e155-2c36-43e0-bda7-07b029d1afe0.png" alt="">
           <h5>العشاء</h5>
-          <span class="timing">5:00</span>
+          <span class="timing"></span>
         </div>
       </div>
     </div>
@@ -161,7 +166,8 @@
   </div>
   <!-- End Podcast -->
 
-  <script src="./js//prayerTime.js"></script>
+  <script src="./js//prayerTime.js" type="module"></script>
+  <script src="./js/ui.js" type="module"></script>
 </body>
 
 </html>
