@@ -391,18 +391,6 @@ body {
   -ms-transition: 0.6s;
   -o-transition: 0.6s;
 }
-.box
-{
-  position: relative;
-}
-.box .timing
-{
-  position: absolute;
-  color: white;
-  bottom: 30%;
-  left:160px;
-  
-}
 .podcast .box:hover img {
   box-shadow: 5px 10px 18px var(--alt-main-color);
 }
@@ -455,5 +443,18 @@ body {
     width: 90%;
     padding: 0;
   }
+}
+
+.box
+{
+  position: relative;
+}
+.box .timing
+{
+  position: absolute;
+  color: white;
+  bottom: 30%;
+  left:160px;
+  
 }
 /* End Podcast */
