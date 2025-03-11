@@ -210,18 +210,20 @@ body {
 .layer #h3-2{
   margin-top: 45px;
 }
-.layer h4{
+.layer h4 , .word h4{
   color: whitesmoke;
   font-size: 25px;
-  margin-top: 130px;
+  margin-top: 150px;
   margin-right: -160px;
+  font-family: "Reem Kufi", sans-serif;
+  
 }
 .word h4{
   font-size: 35px;
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -220%);
+  transform: translate(-50%, -290%);
   display: none;
 }
 .salah .image{
@@ -247,16 +249,15 @@ body {
   left: 50%;
   transform: translate(-140%, 75%);
 }
-.box
-{
-  position: relative;
-}
 .box .timing
 {
   position: absolute;
   color: white;
-  bottom: 30%;
-  left:68%;
+  font-family:cursive;
+  font-size: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(45% , 40%);
 }
 .image .container .box:first-child{
   grid-column: 1 / span 2;
@@ -276,6 +277,9 @@ body {
 @media (max-width:1228px){
   .salah .layer{
     display: none;
+  }
+  .word h4{
+    display: block;
   }
   .salah .image{
     flex: 1;
@@ -309,9 +313,9 @@ body {
   .image .box h5{
     transform: translate(-150%, 100%);
   }
-  .box .timing
-  {
-    left: 55%;
+  .box .timing{
+    font-size: 30px;
+    transform: translate(10%, 40%);
   }
 }
 @media (max-width:973px){
@@ -333,14 +337,16 @@ body {
   .image .container .box:nth-child(5){
     grid-column: 2 / span 1;
   }
-    .box .timing
-  {
-    left: 55%;
+  .box .timing{
+    transform: translate(-10%, 40%);
+  }
+  .salah {
+    gap: 0px;
   }
 }
-@media(max-width:750px){
+@media(max-width:748px){
   .salah .container{
-    grid-template-columns: auto
+    grid-template-columns: 1fr
   }
   .image .container .box:first-child{
     grid-column: 1 / span 1;
@@ -357,9 +363,11 @@ body {
   .image .container .box:nth-child(5){
     grid-column: 1 / span 1;
   }
-  .box .timing
-  {
-    left: 55%;
+  .box .timing{
+    transform: translate(11%, 40%);
+  }
+  .salah {
+    gap: 20px;
   }
 }
 /* End Salah */
