@@ -239,6 +239,17 @@ body {
   left: 50%;
   transform: translate(-140%, 75%);
 }
+.box
+{
+  position: relative;
+}
+.box .timing
+{
+  position: absolute;
+  color: white;
+  bottom: 30%;
+  left:68%;
+}
 .image .container .box:first-child{
   grid-column: 1 / span 2;
 }
@@ -290,6 +301,10 @@ body {
   .image .box h5{
     transform: translate(-150%, 100%);
   }
+  .box .timing
+  {
+    left: 55%;
+  }
 }
 @media (max-width:973px){
   .salah .container{
@@ -310,6 +325,10 @@ body {
   .image .container .box:nth-child(5){
     grid-column: 2 / span 1;
   }
+    .box .timing
+  {
+    left: 55%;
+  }
 }
 @media(max-width:750px){
   .salah .container{
@@ -329,6 +348,10 @@ body {
   }
   .image .container .box:nth-child(5){
     grid-column: 1 / span 1;
+  }
+  .box .timing
+  {
+    left: 55%;
   }
 }
 /* End Salah */
@@ -445,16 +468,4 @@ body {
   }
 }
 
-.box
-{
-  position: relative;
-}
-.box .timing
-{
-  position: absolute;
-  color: white;
-  bottom: 30%;
-  left:160px;
-  
-}
 /* End Podcast */
