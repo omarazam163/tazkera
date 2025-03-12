@@ -1,5 +1,5 @@
 const timingsDivs = document.querySelectorAll(".timing");
-const city = document.getElementById("city");
+const city = document.querySelectorAll(".city");
 const apiKey = "4287c458-be03-45c1-8336-78691c24f6de";
 async function getIpAdress() {
   let ip = await fetch("https://api.ipify.org?format=json");
@@ -27,7 +27,7 @@ async function GetTimings() {
 
 async function displayTimings() {
   const Data = await GetTimings();
-  city.innerHTML = Data[0].city;
+  city.forEach((span)=> span.innerHTML= Data[0].city);
   let timings = Data[1];
   const prayers = {
     Fajr: timings.data.timings.Fajr,
