@@ -1,4 +1,4 @@
-const apiKey = "0ae8f6f8-c713-4802-a4d6-8b8dbb75ba11";
+const apiKey = "07b82cf7-f587-4f06-8d60-f8d1a4cfaed1";
 let prayers = {};
 async function getIpAdress() {
   let ip = await fetch("https://api.ipify.org?format=json");
@@ -101,7 +101,6 @@ function AddAlarms() {
       let [hours, minutes] = prayers[prayer].split(":").map(Number);
       let alarmTime = new Date();
       alarmTime.setHours(hours, minutes, 0, 0);
-
       // If the time has already passed today, schedule it for the next day
       if (alarmTime.getTime() <= Date.now()) {
         alarmTime.setDate(alarmTime.getDate() + 1);
