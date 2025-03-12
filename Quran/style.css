@@ -85,6 +85,22 @@ html {
   min-height: calc(100vh - 105px);
   max-height: calc(100vh - 150px);
 }
+.quran .side-list #surah-list{
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 10px;
+  margin: auto;
+  list-style: none;
+  width: 200px;
+}
+.quran .side-list #surah-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.quran .side-list #surah-list::-webkit-scrollbar-thumb {
+    background: #d1b260; /* Scrollbar color */
+    border-radius: 10px;
+}
 .quran .side-list input {
   background-color: var(--background-color);
   color: var(--alt-main-color);
@@ -102,15 +118,15 @@ html {
 .quran input:focus {
   outline: none;
 }
-.quran .side-list #surah-list {
+.quran .side-list .surah-side {
   counter-reset: surah-counter;
   display: none;
 }
-.quran .side-list:hover #surah-list {
+.quran .side-list:hover .surah-side {
   display: block;
 }
 .quran .side-list #surah-list li {
-  padding: 5px 30px 5px 0;
+  padding: 8px 0;
   cursor: pointer;
   position: relative;
 }
@@ -129,15 +145,15 @@ html {
     right: 10px;
     z-index: 1;
     background-color: var(--background-color);
-    width: 50%;
+    width: 35%;
   }
 }
-.quran .side-list #surah-list li::before {
-  counter-increment: surah-counter; /* Increase counter */
+/* .quran .side-list #surah-list li::before {
+  counter-increment: surah-counter;
   content: counter(surah-counter, arabic-indic) " ";
   position: absolute;
   right: 5px;
-}
+} */
 .quran .container img {
   max-height: 100%;
   max-width: 100%;
@@ -148,6 +164,7 @@ html {
   -moz-transform: translateX(50%);
   -ms-transform: translateX(50%);
   -o-transform: translateX(50%);
+  background-color: var(--main-color);
 }
 .quran .container .buttons {
   display: flex;
@@ -166,10 +183,27 @@ html {
   align-items: center;
   cursor: pointer;
 }
+
 .quran .container .buttons i.back {
   padding-top: 10px;
 }
 .quran .container .buttons i.next {
   padding-bottom: 10px;
+}
+.quran .container .buttons i:hover{
+  background-color: var(--main-color);
+  color: white;
+}
+.buttons #pageNumber {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--main-color);
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* End Quran */

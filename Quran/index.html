@@ -36,38 +36,22 @@
       <div class="container">
         <div class="side-list">
           <i class="fa-solid fa-bars-staggered list-icon"></i>
-          <ul id="surah-list">
-            <input
-              type="text"
-              name="surah"
-              id="search"
-              placeholder="ابحث عن سورة"
-            />
-            <li>الفاتحة</li>
-            <li>البقرة</li>
-            <li>آل عمران</li>
-            <li>النساء</li>
-            <li>المائدة</li>
-            <li>الأنعام</li>
-            <li>الأعراف</li>
-            <li>الأانفال</li>
-            <li>التوبة</li>
-            <li>يونس</li>
-            <li>هود</li>
-            <li>يوسف</li>
-            <li>الرعد</li>
-            <li>إبراهيم</li>
-          </ul>
+          <div class="surah-side">
+            <input type="text" name="surah" id="search" placeholder="ابحث عن سورة" />
+            <ul id="surah-list"></ul>
+          </div>
         </div>
-        <div class="surah">
-          <img src="surah.jpg" alt="" />
+        <div class="surah" id="ayah-container">
+          <img src="quran-images/101.png" alt="" id="imagePage"/>
         </div>
         <div class="buttons">
-          <i class="fa-solid fa-sort-up back"></i>
-          <i class="fa-solid fa-sort-down next"></i>
+          <i class="fa-solid fa-sort-up back" id="prev-page"></i>
+          <span id="pageNumber"></span>
+          <i class="fa-solid fa-sort-down next" id="next-page"></i>
         </div>
       </div>
     </div>
     <!-- End Section -->
+    <script src="main.js"></script>
   </body>
 </html>
