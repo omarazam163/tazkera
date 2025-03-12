@@ -130,19 +130,11 @@ html{
   .header ul{
     display: none;
   }
-  #nav2 i:hover + ul{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 105%;
-    left: 0;
-    width: 50%;
-    background-color: rgb(64 47 11 / 50%);
-  }
   .header ul a::before{
     display: none;
   }
 }
+
 .header #log-in, #register{
   padding: 5px 15px;
   border: 1px solid transparent;
@@ -483,3 +475,14 @@ body {
 }
 
 /* End Podcast */
+
+
+.open-nav{
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 50%;
+    background-color: rgb(64 47 11 / 50%);
+}
