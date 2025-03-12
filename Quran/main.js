@@ -10,7 +10,7 @@ const nextButton = document.getElementById("next-page");
 
 let allSurahs = [];
 
-fetch("http://api.alquran.cloud/v1/quran/quran-uthmani")
+fetch("https://api.alquran.cloud/v1/quran/quran-uthmani")
     .then(response => response.json())
     .then(data => {
         allSurahs = data.data.surahs.map(surah => ({
