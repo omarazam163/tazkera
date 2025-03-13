@@ -129,6 +129,7 @@ async function addBookMark(token, page) {
 
 async function getDays(token) {
   const now = new Date();
+  now.setHours(12, 0, 0, 0);
   const formattedDate = now.toISOString().split("T")[0];
   console.log(formattedDate);
   let data = await fetch(
@@ -147,6 +148,7 @@ async function getDays(token) {
 
 async function updateNumberOfPages(token, page) {
   const now = new Date();
+  now.setHours(12, 0, 0, 0);
   const formattedDate = now.toISOString().split("T")[0];
   console.log(page);
   let data = await fetch(
@@ -173,4 +175,4 @@ async function updateNumberOfPages(token, page) {
 
 sideButton.addEventListener("click", function () {
   sideBar.classList.toggle("d-none");
-})
+});
