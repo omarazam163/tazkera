@@ -125,9 +125,9 @@ async function addCharts() {
           type: "bar",
           label: "عدد الصفحات المقروءة",
           data: pages, // Total pages read
-          backgroundColor: "rgba(0, 0, 0, 0.7)",
-          borderColor: "#d5b44d85",
-          borderWidth: 1,
+          backgroundColor: "whitesmoke",
+          borderColor: "#d1b260",
+          borderWidth: 2,
         },
       ],
     },
