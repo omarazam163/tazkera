@@ -27,7 +27,7 @@ async function GetTimings() {
 
 async function displayTimings() {
   const Data = await GetTimings();
-  city.forEach((span)=> span.innerHTML= Data[0].city);
+  city.forEach((span) => span.innerHTML = Data[0].city);
   let timings = Data[1];
   const prayers = {
     Fajr: timings.data.timings.Fajr,
@@ -37,10 +37,9 @@ async function displayTimings() {
     Isha: timings.data.timings.Isha,
   };
   let counter = 0;
-  for(const prayer in prayers)
-  {
-    timingsDivs[counter].innerHTML= prayers[prayer]
-    counter++;   
+  for (const prayer in prayers) {
+    timingsDivs[counter].innerHTML = prayers[prayer]
+    counter++;
   }
 }
 

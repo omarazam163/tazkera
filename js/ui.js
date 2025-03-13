@@ -13,8 +13,7 @@ if (token) {
   User.innerHTML = userData.name;
   addCharts();
 }
-else
-{
+else {
   document.getElementById("charts").style.display = "none";
 }
 
@@ -78,15 +77,14 @@ async function getDays(token) {
 
 async function getDaysofWeek() {
   let Days = await getDays(token);
-  const date =new Date()
+  const date = new Date()
   //filtered date 
   // get 6 days before
   const dic = {};
-  for(let i = 0; i <=6 ; i++)
-  {
+  for (let i = 0; i <= 6; i++) {
     let b = new Date()
     b.setDate(b.getDate() - i);
-    dic[b.toDateString()]=0;
+    dic[b.toDateString()] = 0;
   }
 
   Days.forEach(element => {
@@ -97,17 +95,13 @@ async function getDaysofWeek() {
   return MapDays(dic)
 }
 
-function MapDays(dic)
-{
+function MapDays(dic) {
   const label = getLabels();
 
-  for(let i in dic)
-  {
-    for(let  j=0;j<label.length;j++)
-    {
+  for (let i in dic) {
+    for (let j = 0; j < label.length; j++) {
       console.log()
-      if(label[j].number == new Date(i).getDay())
-      {
+      if (label[j].number == new Date(i).getDay()) {
         console.log("here")
         label[j].pages = dic[i];
       }
@@ -116,9 +110,8 @@ function MapDays(dic)
   return label
 }
 
-async function addCharts()
-{
-  let data =await getDaysofWeek();
+async function addCharts() {
+  let data = await getDaysofWeek();
   const ctx = document.getElementById("statsChart").getContext("2d");
 
   const labels = data.map((item) => item.day);
