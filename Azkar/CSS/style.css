@@ -141,3 +141,26 @@
     color: var(--alt-main-color);
   }
 }
+
+.d-none
+{
+  display: none;
+}
+
+.box
+{
+  cursor: pointer;
+}
+
+#back
+{
+  display: block;
+  margin-right: auto;
+  background-color: transparent;
+  color: var(--main-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 30px;
+}

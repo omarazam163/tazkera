@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azkar</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Reem+Kufi:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="CSS/style.css" />
+
+<body>
+    <div id="choose">
+        <div class="azkar">
+            <div class="container">
+                <div class="boxes">
+                    <div class="box" id="azkar-morning">
+                        <a>
+                            <i class="fa-regular fa-sun"></i>
+                            <h2>أذكار الصباح</h2>
+                        </a>
+                    </div>
+                    <div class="box" id="azkar-night">
+                        <a id="azkar-night">
+                            <i class="fa-regular fa-moon"></i>
+                            <h2>أذكار المساء</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-none" id="azkar">
+        <div class="nav">
+            <div class="container">
+                <h1 id="azkar-name">أذكار الصباح</h1>
+            </div>
+        </div>
+        <div class="azkar-m">
+            <div class="container">
+                <button id="back">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </button>
+                <p id="azkar-content">بسم الله الرحمن الرحيم
+                    <br>
+                    قُلۡ هُوَ ٱللَّهُ أَحَدٌ ١ ٱللَّهُ ٱلصَّمَدُ ٢ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ٣ وَلَمۡ يَكُن لَّهُۥ
+                    كُفُوًا
+                    أَحَدُۢ ٤
+                </p>
+                <p style="margin-top: 20px; text-align: left;">
+                    <span id="number-of-repetition">5</span>
+                    مرة
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <a id="next">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <span class="count" id="number">3</span>
+            <a id="prev">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <script src="./js//azkar.js"></script>
+</body>
