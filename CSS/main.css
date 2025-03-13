@@ -401,6 +401,7 @@ body {
   );
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+  color: whitesmoke;
 }
 #charts .container {
   padding-bottom: 15px;

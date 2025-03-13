@@ -140,7 +140,7 @@ async function addCharts() {
           title: {
             display: true,
             text: "أيام الأسبوع",
-            color: "#000",
+            color: "whitesmoke",
             font: { size: 18 },
           },
           ticks: {
@@ -156,7 +156,7 @@ async function addCharts() {
           title: {
             display: true,
             text: "عدد الصفحات",
-            color: "#000",
+            color: "whitesmoke",
             font: { size: 18 },
           },
         },
@@ -164,7 +164,7 @@ async function addCharts() {
       plugins: {
         legend: {
           labels: {
-            color: "#000",
+            color: "whitesmoke",
             font: { size: 18 },
           },
         },
