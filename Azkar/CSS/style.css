@@ -1,0 +1,143 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  /* small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+  /* Start Variables */
+  :root {
+    --main-color: #d1b260;
+    --alt-main-color: #d5b44d85;
+    --background-color: #010103;
+    --background-color2:#402F0B;
+    --section-padding: 100px;
+  }
+ /* End Variables  */
+ /* Start Azkar page */
+ .azkar {
+  background-image: linear-gradient(var(--background-color2),var(--background-color));
+  color: white;
+ .container {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+ }
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: space-evenly;
+    max-width: 90%;
+    .box {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 400px;
+        max-width: 90%;
+        background-color: var(--background-color2);
+        border-radius: 10px;
+        box-shadow: 5px 10px 18px var(--background-color);
+        transition: .6s;
+        i {
+            color:var(--main-color);
+            font-size: 50px;
+        }
+    }
+    .box:hover {
+        box-shadow: 5px 10px 18px var(--alt-main-color);
+    }
+  }
+ }
+.nav{
+  padding: 10px ;
+  position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 5px 5px 15px var(--alt-main-color);
+    color: var(--main-color);
+}
+/* End Azkar Page */
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.azkar-m {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--main-color);
+}
+.footer {
+  padding: 40px;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 5px 5px 15px var(--alt-main-color);
+  width: 100%;
+  height: 50px;
+  background-color: var(--background-color);
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30px;
+  span{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-color);
+    background-color: var(--main-color);
+    border-radius: 50%;  
+  }
+  a {
+    color: var(--main-color);
+  }
+  a:hover {
+    color: var(--alt-main-color);
+  }
+}
