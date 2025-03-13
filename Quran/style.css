@@ -84,22 +84,26 @@ html {
   justify-content: space-between;
   min-height: calc(100vh - 105px);
   max-height: calc(100vh - 150px);
+  overflow: hidden;
+  position: relative;
 }
-.quran .side-list #surah-list{
+.quran .side-list #surah-list {
   max-height: 500px;
   overflow-y: auto;
   padding: 10px;
-  margin: auto;
   list-style: none;
   width: 200px;
 }
 .quran .side-list #surah-list::-webkit-scrollbar {
   width: 8px;
 }
-
 .quran .side-list #surah-list::-webkit-scrollbar-thumb {
-    background: #d1b260; /* Scrollbar color */
-    border-radius: 10px;
+  background: #d1b260;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .quran .side-list input {
   background-color: var(--background-color);
@@ -117,6 +121,23 @@ html {
 }
 .quran input:focus {
   outline: none;
+}
+/* @media (max-width: 991px) {
+  .quran .side-list:hover {
+
+    width: 35%;
+    height: calc(100vh - 100px);
+  }
+} */
+@media (max-width: 768px) {
+  .quran .side-list:hover {
+    width: 55%;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: 1;
+    background-color: var(--background-color);
+  }
 }
 .quran .side-list .surah-side {
   counter-reset: surah-counter;
@@ -139,15 +160,6 @@ html {
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
 }
-@media (max-width: 769px) {
-  .quran .side-list:hover #surah-list {
-    position: absolute;
-    right: 10px;
-    z-index: 1;
-    background-color: var(--background-color);
-    width: 35%;
-  }
-}
 /* .quran .side-list #surah-list li::before {
   counter-increment: surah-counter;
   content: counter(surah-counter, arabic-indic) " ";
@@ -166,6 +178,11 @@ html {
   -o-transform: translateX(50%);
   background-color: var(--main-color);
 }
+@media (max-width: 768px) {
+  .quran .container img {
+    margin-top: 50px;
+  }
+}
 .quran .container .buttons {
   display: flex;
   flex-direction: column;
@@ -183,14 +200,13 @@ html {
   align-items: center;
   cursor: pointer;
 }
-
 .quran .container .buttons i.back {
   padding-top: 10px;
 }
 .quran .container .buttons i.next {
   padding-bottom: 10px;
 }
-.quran .container .buttons i:hover{
+.quran .container .buttons i:hover {
   background-color: var(--main-color);
   color: white;
 }
