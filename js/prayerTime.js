@@ -1,6 +1,6 @@
 const timingsDivs = document.querySelectorAll(".timing");
 const city = document.querySelectorAll(".city");
-const apiKey = "07b82cf7-f587-4f06-8d60-f8d1a4cfaed1";
+const apiKey = "0ed34c86-5dd1-42ba-ab08-3604d1106b76";
 async function getIpAdress() {
   let ip = await fetch("https://api.ipify.org?format=json");
   ip = await ip.json();
