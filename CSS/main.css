@@ -315,11 +315,19 @@ body {
   }
   .image .box h5 {
     transform: translate(-150%, 100%);
-  }
+    -webkit-transform: translate(-150%, 100%);
+    -moz-transform: translate(-150%, 100%);
+    -ms-transform: translate(-150%, 100%);
+    -o-transform: translate(-150%, 100%);
+}
   .box .timing {
     font-size: 30px;
     transform: translate(10%, 40%);
-  }
+    -webkit-transform: translate(10%, 40%);
+    -moz-transform: translate(10%, 40%);
+    -ms-transform: translate(10%, 40%);
+    -o-transform: translate(10%, 40%);
+}
 }
 @media (max-width: 973px) {
   .salah .container {
@@ -342,7 +350,11 @@ body {
   }
   .box .timing {
     transform: translate(-10%, 40%);
-  }
+    -webkit-transform: translate(-10%, 40%);
+    -moz-transform: translate(-10%, 40%);
+    -ms-transform: translate(-10%, 40%);
+    -o-transform: translate(-10%, 40%);
+}
   .salah {
     gap: 0px;
   }
@@ -368,12 +380,67 @@ body {
   }
   .box .timing {
     transform: translate(11%, 40%);
-  }
+    -webkit-transform: translate(11%, 40%);
+    -moz-transform: translate(11%, 40%);
+    -ms-transform: translate(11%, 40%);
+    -o-transform: translate(11%, 40%);
+}
   .salah {
     gap: 20px;
   }
 }
 /* End Salah */
+/* Start Charts */
+#charts {
+  background-image: linear-gradient(
+    var(--background-color2),
+    var(--background-color)
+  );
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+#charts .container {
+  padding-bottom: 15px;
+  background-color: var(--background-color2);
+  box-shadow: 5px 10px 18px var(--background-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+#charts .container:hover {
+  box-shadow: 5px 10px 18px var(--alt-main-color);
+}
+#charts h1 {
+  margin: 0px;
+  padding-top: 10px;
+}
+@media (max-width: 768px) {
+  #charts h1 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+canvas {
+  max-width: 600px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  canvas {
+    max-width: 100%;
+  }
+}
+/* End Charts */
 /* Start Podcast */
 .podcast {
   position: relative;
@@ -505,20 +572,4 @@ body {
   left: 0;
   width: 50%;
   background-color: rgb(64 47 11 / 50%);
-}
-
-#charts {
-  background-color: var(--main-color);
-}
-#charts h1 {
-  margin: 0px;
-  padding-top: 10px;
-}
-
-canvas {
-  max-width: 600px;
-  max-height: 300px;
-  width: 100%;
-  height: auto;
-  margin: auto;
 }

@@ -125,8 +125,8 @@ async function addCharts() {
           type: "bar",
           label: "عدد الصفحات المقروءة",
           data: pages, // Total pages read
-          backgroundColor: "rgba(75, 192, 192, 0.7)",
-          borderColor: "rgba(75, 192, 192, 1)",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          borderColor: "#d5b44d85",
           borderWidth: 1,
         },
       ],
@@ -141,7 +141,7 @@ async function addCharts() {
             display: true,
             text: "أيام الأسبوع",
             color: "#000",
-            font: { size: 14 },
+            font: { size: 18 },
           },
           ticks: {
             font: function (context) {
@@ -157,7 +157,7 @@ async function addCharts() {
             display: true,
             text: "عدد الصفحات",
             color: "#000",
-            font: { size: 14 },
+            font: { size: 18 },
           },
         },
       },
@@ -165,7 +165,7 @@ async function addCharts() {
         legend: {
           labels: {
             color: "#000",
-            font: { size: 12 },
+            font: { size: 18 },
           },
         },
       },
