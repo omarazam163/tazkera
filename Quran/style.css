@@ -141,11 +141,8 @@ html {
 }
 .quran .side-list .surah-side {
   counter-reset: surah-counter;
-  display: none;
 }
-.quran .side-list:hover .surah-side {
-  display: block;
-}
+
 .quran .side-list #surah-list li {
   padding: 8px 0;
   cursor: pointer;
@@ -223,3 +220,8 @@ html {
   align-items: center;
 }
 /* End Quran */
+
+.d-none
+{
+    display: none;
+}

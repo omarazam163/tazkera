@@ -8,6 +8,8 @@ const imagePage = document.getElementById("imagePage");
 const pageNumber = document.getElementById("pageNumber");
 const prevButton = document.getElementById("prev-page");
 const nextButton = document.getElementById("next-page");
+const sideBar = document.getElementById("sidebar");
+const sideButton = document.getElementById("sideButton");
 let allSurahs = [];
 
 if (!token) {
@@ -168,3 +170,7 @@ async function updateNumberOfPages(token, page) {
     console.log("error");
   }
 }
+
+sideButton.addEventListener("click", function () {
+  sideBar.classList.toggle("d-none");
+})
