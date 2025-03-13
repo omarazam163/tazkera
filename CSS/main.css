@@ -494,3 +494,21 @@ body {
     width: 50%;
     background-color: rgb(64 47 11 / 50%);
 }
+
+#charts 
+{
+    background-color: var(--main-color);
+}
+#charts h1
+{
+  margin: 0px;
+  padding-top: 10px;
+}
+
+canvas {
+    max-width: 600px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
