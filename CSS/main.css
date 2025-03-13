@@ -175,26 +175,32 @@ body {
 /* End Landing */
 /* Start Salah */
 .salah {
+  max-width: 100vw;
+  min-height: 100vh;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
   position: relative;
   background-image: linear-gradient(
     var(--background-color2),
     var(--background-color)
   );
-  padding: 100px 0px;
-  min-height: 100vh;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 100px;
+  gap: 80px;
 }
 .salah .layer {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   background-color: rgb(1 1 3 / 40%);
   font-family: "Reem Kufi", sans-serif;
   width: calc((100% - 100px) / 2);
   height: 300px;
-  justify-content: center;
+}
+.layer img {
+  margin-right: 20px;
+  margin-left: 20px;
 }
 .layer h3 {
   color: whitesmoke;
@@ -278,7 +284,7 @@ body {
 .image .container .box:nth-child(5) {
   grid-column: 4 / span 2;
 }
-@media (max-width: 1228px) {
+@media (max-width: 1200px) {
   .salah .layer {
     display: none;
   }
@@ -329,7 +335,7 @@ body {
     -o-transform: translate(10%, 40%);
 }
 }
-@media (max-width: 973px) {
+@media (max-width: 991px) {
   .salah .container {
     grid-template-columns: repeat(3, minmax(75px, 200px));
   }
@@ -355,11 +361,8 @@ body {
     -ms-transform: translate(-10%, 40%);
     -o-transform: translate(-10%, 40%);
 }
-  .salah {
-    gap: 0px;
-  }
 }
-@media (max-width: 748px) {
+@media (max-width: 768px) {
   .salah .container {
     grid-template-columns: 1fr;
   }
