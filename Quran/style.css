@@ -122,27 +122,21 @@ html {
 .quran input:focus {
   outline: none;
 }
-/* @media (max-width: 991px) {
-  .quran .side-list:hover {
-
+@media (max-width: 991px) {
+  .quran .side-list {
     width: 35%;
     height: calc(100vh - 100px);
   }
-} */
+}
 @media (max-width: 768px) {
-  .quran .side-list:hover {
+  .quran .side-list {
     width: 55%;
     position: absolute;
     right: 10px;
     top: 0;
     z-index: 1;
-    background-color: var(--background-color);
   }
 }
-.quran .side-list .surah-side {
-  counter-reset: surah-counter;
-}
-
 .quran .side-list #surah-list li {
   padding: 8px 0;
   cursor: pointer;
@@ -157,12 +151,9 @@ html {
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
 }
-/* .quran .side-list #surah-list li::before {
-  counter-increment: surah-counter;
-  content: counter(surah-counter, arabic-indic) " ";
-  position: absolute;
-  right: 5px;
-} */
+.quran .side-list #sidebar {
+  background-color: var(--background-color);
+}
 .quran .container img {
   max-height: 100%;
   max-width: 100%;
