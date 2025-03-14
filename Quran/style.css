@@ -121,6 +121,7 @@ html {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
+  width: 140px;
 }
 .quran input:focus {
   outline: none;
