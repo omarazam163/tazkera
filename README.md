@@ -16,24 +16,6 @@ Tazkera is an Islamic lifestyle app designed to help users stay connected with t
 ## Live Demo
 Try out the live demo here: [Tazkera](https://omarazam163.github.io/tazkera/)
 
-## Installation
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/omarazam163/tazkera.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd tazkera
-   ```
-3. Install dependencies:
-   ```sh
-   npm install  # or yarn install
-   ```
-4. Run the application:
-   ```sh
-   npm run start  # or yarn start
-   ```
 
 ## Backend Repository
 The backend of this project is available at: [Tazkera Backend](https://github.com/omarazam163/ieee-comp-backend)
