@@ -76,7 +76,7 @@ html {
 .quran {
   padding-top: 100px;
   min-height: 100vh;
-  background-color: var(--background-color);
+  background-image: linear-gradient(var(--background-color2), var(--background-color));
   color: white;
 }
 .quran .container {
@@ -86,6 +86,10 @@ html {
   max-height: calc(100vh - 150px);
   overflow: hidden;
   position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .quran .side-list #surah-list {
   max-height: 500px;
@@ -173,7 +177,7 @@ html {
   -moz-transform: translateX(50%);
   -ms-transform: translateX(50%);
   -o-transform: translateX(50%);
-  background-color: var(--main-color);
+  background-color: beige;
 }
 @media (max-width: 768px) {
   .quran .container img {
