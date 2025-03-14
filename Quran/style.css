@@ -191,6 +191,7 @@ html {
     gap: 20px;
     position: absolute;
     left: 50%;
+    bottom: 0px;
     transform: translateX(-50%);
 }
 }
