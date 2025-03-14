@@ -185,6 +185,15 @@ html {
   flex-direction: column;
   justify-content: flex-end;
 }
+@media (max-width: 500px){
+  .quran .container .buttons {
+    flex-direction: row;
+    gap: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+}
 .quran .container .buttons i {
   font-size: 30px;
   background-color: var(--alt-main-color);
