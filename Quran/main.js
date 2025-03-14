@@ -49,6 +49,7 @@ function displaySurahs(surahs) {
     li.addEventListener("click", function () {
       currentPage = Number(this.dataset.page);
       updatePage(currentPage);
+        searchInput.value="";
     });
     surahList.appendChild(li);
   });
