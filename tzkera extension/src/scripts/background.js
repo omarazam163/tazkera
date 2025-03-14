@@ -1,4 +1,4 @@
-const apiKey = "07b82cf7-f587-4f06-8d60-f8d1a4cfaed1";
+const apiKey = "02a1d04c-52a2-4c82-9b49-b0c00029bdaf";
 let prayers = {};
 async function getIpAdress() {
   let ip = await fetch("https://api.ipify.org?format=json");

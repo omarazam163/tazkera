@@ -3,19 +3,30 @@
   "version": "0.1",
   "manifest_version": 3,
   "description": "Extension description",
-  "permissions": ["storage","notifications","alarms"],
+  "permissions": ["storage", "notifications", "alarms"],
+  "host_permissions": ["<all_urls>"],
+  "icons": {
+    "16": "mosque.png",
+    "48": "mosque.png",
+    "128": "mosque.png"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["./src/scripts/script.js"],
-      "css": ["./src/css/style.css"]
+      "js": ["src/scripts/script.js"],
+      "css": ["src/css/style.css"]
     }
   ],
   "background": {
-    "service_worker": "./src/scripts/background.js"
+    "service_worker": "src/scripts/background.js"
   },
   "action": {
     "default_title": "Title",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "mosque.png",
+      "48": "mosque.png",
+      "128": "mosque.png"
+    }
   }
 }
