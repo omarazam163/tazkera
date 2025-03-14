@@ -125,9 +125,9 @@ async function addCharts() {
           type: "bar",
           label: "عدد الصفحات المقروءة",
           data: pages, // Total pages read
-          backgroundColor: "whitesmoke",
-          borderColor: "#d1b260",
-          borderWidth: 2,
+          backgroundColor: "#F5F5F5",
+          borderColor: "#F5F5F5",
+          borderWidth: 1,
         },
       ],
     },
@@ -146,9 +146,10 @@ async function addCharts() {
           ticks: {
             font: function (context) {
               return context.index === labels.length - 1
-                ? { weight: "bolder" } // Bold for last day
+                ? { weight: "900" } // Bold for last day
                 : { weight: "normal" };
             },
+            color: "whitesmoke",
           },
         },
         y: {
@@ -158,6 +159,9 @@ async function addCharts() {
             text: "عدد الصفحات",
             color: "whitesmoke",
             font: { size: 18 },
+          },
+          ticks:{
+            color: "whitesmoke",
           },
         },
       },
