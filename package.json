@@ -1,0 +1,15 @@
+{
+  "name": "ieee-extenstion-",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Tazkera is an Islamic lifestyle app designed to help users stay connected with their faith. It provides essential features such as prayer times based on location, a digital Moshaf with bookmarking capabilities, daily progress tracking, and a collection of supplications and remembrances.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^13.12.0"
+  }
+}
