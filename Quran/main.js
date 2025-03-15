@@ -50,6 +50,7 @@ function displaySurahs(surahs) {
       currentPage = Number(this.dataset.page);
       updatePage(currentPage);
         searchInput.value="";
+        sideBar.classList.add("d-none");
     });
     surahList.appendChild(li);
   });

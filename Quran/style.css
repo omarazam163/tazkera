@@ -121,7 +121,9 @@ html {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
-  width: 140px;
+  width: 90%;
+  margin: auto;
+  display: block;
 }
 .quran input:focus {
   outline: none;
@@ -134,7 +136,7 @@ html {
 }
 @media (max-width: 768px) {
   .quran .side-list {
-    width: 55%;
+    width: auto;
     position: absolute;
     right: 10px;
     top: 0;
@@ -230,4 +232,9 @@ html {
 .d-none
 {
     display: none;
+}
+
+#sidebar
+{
+  padding-top: 20px;
 }
